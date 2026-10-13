@@ -1,0 +1,198 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bunga Cantik</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(
+                to bottom,
+                #ffe4ec,
+                #fff5f7
+            );
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            color: #e75480;
+            margin-bottom: 50px;
+            font-size: 32px;
+            animation: muncul 2s ease-in-out;
+        }
+
+        .bunga {
+            position: relative;
+            width: 200px;
+            height: 280px;
+            margin: auto;
+            animation: goyang 3s ease-in-out infinite;
+            transform-origin: bottom center;
+        }
+
+        .kelopak {
+            position: absolute;
+            width: 70px;
+            height: 90px;
+            background: linear-gradient(
+                #ff8fab,
+                #ff4d8d
+            );
+            border-radius: 50%;
+            top: 20px;
+            left: 65px;
+            transform-origin: bottom center;
+            box-shadow: 0 3px 10px #ff8fab66;
+        }
+
+        .kelopak:nth-child(1) {
+            transform: rotate(0deg) translateY(-25px);
+        }
+
+        .kelopak:nth-child(2) {
+            transform: rotate(60deg) translateY(-25px);
+        }
+
+        .kelopak:nth-child(3) {
+            transform: rotate(120deg) translateY(-25px);
+        }
+
+        .kelopak:nth-child(4) {
+            transform: rotate(180deg) translateY(-25px);
+        }
+
+        .kelopak:nth-child(5) {
+            transform: rotate(240deg) translateY(-25px);
+        }
+
+        .kelopak:nth-child(6) {
+            transform: rotate(300deg) translateY(-25px);
+        }
+
+        .tengah {
+            position: absolute;
+            width: 55px;
+            height: 55px;
+            background: radial-gradient(
+                circle,
+                #ffe66d,
+                #ffb703
+            );
+            border-radius: 50%;
+            top: 38px;
+            left: 72px;
+            z-index: 2;
+            box-shadow: 0 0 15px #ffd166;
+        }
+
+        .batang {
+            position: absolute;
+            width: 10px;
+            height: 160px;
+            background: linear-gradient(
+                to right,
+                #40916c,
+                #74c69d
+            );
+            top: 85px;
+            left: 95px;
+            border-radius: 10px;
+            z-index: -1;
+        }
+
+        .daun {
+            position: absolute;
+            width: 65px;
+            height: 30px;
+            background: linear-gradient(
+                #74c69d,
+                #2d6a4f
+            );
+            border-radius: 100% 0 100% 0;
+        }
+
+        .daun.kiri {
+            top: 155px;
+            left: 35px;
+            transform: rotate(15deg);
+        }
+
+        .daun.kanan {
+            top: 190px;
+            left: 100px;
+            transform: rotate(80deg) scaleX(-1);
+        }
+
+        .pesan {
+            color: #c9184a;
+            margin-top: 25px;
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        @keyframes goyang {
+            0%, 100% {
+                transform: rotate(-5deg);
+            }
+
+            50% {
+                transform: rotate(5deg);
+            }
+        }
+
+        @keyframes muncul {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🌸 Bunga Untukmu 🌸</h1>
+
+        <div class="bunga">
+            <div class="kelopak"></div>
+            <div class="kelopak"></div>
+            <div class="kelopak"></div>
+            <div class="kelopak"></div>
+            <div class="kelopak"></div>
+            <div class="kelopak"></div>
+
+            <div class="tengah"></div>
+            <div class="batang"></div>
+            <div class="daun kiri"></div>
+            <div class="daun kanan"></div>
+        </div>
+
+        <p class="pesan">
+            Semoga harimu seindah bunga ini 💗
+        </p>
+    </div>
+</body>
+</html>
+```
